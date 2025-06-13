@@ -24,9 +24,13 @@ Python Libraries: dpkt, socket, pygeoip
 📂 Project Structure
 network-tracking-project/
 ├── wire.pcap → Network traffic capture file
+
 ├── GeoLiteCity.dat → IP geolocation database
+
 ├── main.py → Python script to process and generate KML
+
 ├── README.md → Project documentation
+
 ├── .gitignore → Ignore large/unused files
 
 🚀 How to Run
