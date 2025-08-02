@@ -1,75 +1,109 @@
-🛰️ Network Traffic Visualization using Python, Wireshark, and Google Maps
-This project captures network traffic using Wireshark, analyzes it with Python, maps the IP locations using the GeoLiteCity database, and visualizes the results on Google Maps through a .kml file.
+# 🛰️ Network Traffic Visualization using Python, Wireshark, and Google Maps
 
-📌 Features
-Extracts IP addresses from captured .pcap files
+A powerful network analysis project that captures live traffic, extracts IPs, maps geolocations using the **GeoLiteCity** database, and visualizes connections on **Google Maps** through a `.kml` file.
 
-Resolves IPs to geolocations using GeoLiteCity database
+> 🔗 Live Demo: _Coming Soon_  
+> 👨‍💻 Developed by [Kolipaka Akhil Surya](https://www.linkedin.com/in/akhilsurya/)
 
-Outputs KML file to visualize connections on Google My Maps
+---
 
-Built with dpkt, socket, and pygeoip
+## 📌 Features
 
-🛠️ Technologies Used
-Python 3.x
+- 🌐 Extracts IP addresses from `.pcap` files captured by Wireshark
+- 🌍 Resolves IPs to geographical locations using **GeoLiteCity**
+- 🗺️ Generates a `.kml` file for Google My Maps visualization
+- ⚙️ Built with **dpkt**, **socket**, and **pygeoip** libraries
 
-Wireshark
+---
 
-GeoLiteCity.dat (IP geolocation database)
+## 🛠️ Technologies Used
 
-Google My Maps for visualization
+- **Programming Language:** Python 3.x  
+- **Traffic Capture Tool:** Wireshark  
+- **Geo Database:** GeoLiteCity.dat  
+- **Visualization:** Google My Maps  
+- **Python Libraries:** `dpkt`, `socket`, `pygeoip`
 
-Python Libraries: dpkt, socket, pygeoip
+---
 
-📂 Project Structure
+## 📁 Project Structure
+
+
+
 network-tracking-project/
 
-├── wire.pcap → Network traffic capture file
+├── wire.pcap # Captured traffic file
 
-├── GeoLiteCity.dat → IP geolocation database
+├── GeoLiteCity.dat # IP geolocation database
 
-├── main.py → Python script to process and generate KML
+├── main.py # Python script to extract & generate .kml
 
-├── README.md → Project documentation
+├── output.kml # Output file for Google Maps (after running)
 
-├── .gitignore → Ignore large/unused files
+├── .gitignore # File to ignore large/unused files
 
-🚀 How to Run
-1. Capture Traffic with Wireshark
+└── README.md # Project documentation
 
-Open Wireshark
 
-Start capture on an active network interface
+---
 
-Stop and export traffic as wire.pcap
+## 🚀 How to Run
 
-2. Download GeoLiteCity Database
+### 1️⃣ Capture Traffic with Wireshark
 
-Download from GitHub: https://github.com/mbcc2006/GeoLiteCity-data
+- Launch **Wireshark**
+- Start capture on your active network interface
+- Stop capture after some time
+- Export the traffic as `wire.pcap` file
 
-Save as GeoLiteCity.dat in your project root folder
+---
 
-3. Install Required Libraries
-Use pip to install the required libraries:
+### 2️⃣ Download GeoLiteCity Database
+
+- Download from this GitHub mirror:  
+  [GeoLiteCity.dat](https://github.com/mbcc2006/GeoLiteCity-data)
+- Save the `.dat` file as `GeoLiteCity.dat` in your project root
+
+---
+
+### 3️⃣ Install Required Python Libraries
+
+```bash
 pip install dpkt pygeoip
 
-4. Edit main.py
-Update your public IP address inside the retKML() function like this:
+4️⃣ Edit main.py
+Update your public IP address inside the retKML() function:
 src = gi.record_by_name('your.public.ip.address')
-(Replace 'your.public.ip.address' with your actual IP, e.g., from https://www.whatsmyip.org/)
 
-5. Run the Script
-Run this command:
+🔄 Replace 'your.public.ip.address' with your actual IP
+🌐 You can find it here: https://www.whatsmyip.org/
+
+5️⃣ Run the Script
 python main.py > output.kml
-This will generate a .kml file containing all your network paths.
 
-🗺️ Visualize on Google Maps
-Go to https://www.google.com/mymaps
-
+✅ This will generate a output.kml file with IP connection paths🗺️ Visualize on Google Maps
+Go to Google My Maps
 Click on "Create a new map"
-
 Click Import on the first layer
+Upload the output.kml file
+Your network traffic will be shown as lines connecting IP locations
 
-Upload the generated output.kml file
+🧠 Use Case
+This tool is useful for:
+Network security analysis
+Visualizing inbound/outbound traffic
+Educational & cybersecurity demonstrations
 
-Your network traffic will be visualized as lines connecting IP locations
+📬 Contact
+GitHub: @AkhilSuryaK
+LinkedIn: Akhil Surya Kolipaka
+
+📃 License
+This project is licensed under the MIT License.
+
+---
+
+Let me know the next project you'd like a `README.md` for—I'll maintain the same quality and consistency!
+  
+
+
